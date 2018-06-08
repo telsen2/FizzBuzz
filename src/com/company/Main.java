@@ -25,7 +25,7 @@ public class Main {
 //        num = userInput.nextInt();                                          //get input from the user
 
         fizzBuzzLogic();            // call to FizBuzz logic
-//      arrayNumbers();     		// call a sub-program to create array for 100 elements
+      //  arrayNumbers();     		// call a sub-program to create array for 100 elements
 //      randomNumGenCall();         // call to create a random generator ->(BONUS points)
 
     }
@@ -44,18 +44,24 @@ public class Main {
         for (inc = 1; inc *i <100;  inc++)
         {
             n = i*inc;
-            System.out.print(" " + i*inc);
+            //System.out.print(" " + i*inc );
         }
 
-        if (i == 3) {
-            System.out.print("Fizz");
-        }
-        if (i == 5)
-        {
-            System.out.print("Buzz");
-        }
+            if (n%3 == 0 && n%5 == 0)
+            {
+                System.out.print("FizzBuzz");
+            } else if (n%3 == 0)
+            {
+                System.out.print("Fizz");
+            } else if  (n%5 == 0)
+            {
+                System.out.print("Buzz");
+            }
+            else System.out.print(" " + i*inc );
 
         return n;
+
+
     }
 
     private static void display()
@@ -63,19 +69,18 @@ public class Main {
 
         };
 
-
-
-    public int arrayNumbers() {
-        //int i=0;
-        int[] intArray = new int[100];    //creates an array of 100 elements
-        int i;
-        for (i = 1; i < 100; ++i)         // for numbers from 1 to 100
-        {
-            intArray[i] = i;                 /* fill  the array with those numbers */
-        }
-        return i;
+//    public  static int arrayNumbers() {
+//        //int i=0;
+//        int[] intArray = new int[100];    //creates an array of 100 elements
+//        int i;
+//        for (i = 1; i < 100; ++i)         // for numbers from 1 to 100
+//        {
+//            intArray[i] = i;                 /* fill  the array with those numbers */
+//            System.out.print( i );
+//        }
+//        return i;
     };
 
 
 
-}
+
